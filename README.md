@@ -1,4 +1,4 @@
-# jQuery OpenAccordian
+# jQuery OpenAccordion
 
 OpenAccordion is a jQuery plugin for accordion-style drop-downs which can use arbitrary tags or selectors as
 section delimiters. Especially useful in CMS and WYSIWYG environments where it is difficult to be sure of the
@@ -13,11 +13,11 @@ exact HTML structure to be used.
 
 Initialize an accordion section with default options using jQuery selectors:
 
-    $("#my-accordian").openaccordian();
+    $("#my-accordion").openaccordion();
 
-Additionally you may pass an options object to the openaccordian method:
+Additionally you may pass an options object to the openaccordion method:
 
-    $("#my-accordian").openaccordian({
+    $("#my-accordion").openaccordion({
         sectionSeparator: 'h3',
         openedIndicator: "&#9660;",
         closedIndicator: "&#x25b6;",
@@ -31,15 +31,15 @@ The above options are the defaults, but can be modified to suit your needs. The 
 
 ## Options
 
-- __sectionSeparator__: The tag or selector to be used to deliniate the start of an accordian section. Defaults to ```h3```
+- __sectionSeparator__: The tag or selector to be used to deliniate the start of an accordion section. Defaults to ```h3```
 - __openedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is open/expanded. Defaults to the down pointing triangle HTML entity (&#9660;).
 - __closedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is closed/contracted. Defaults to the right pointing triangle HTML entity (&#x25b6;).
 - __displayOpenIndicator__: Whether or not the open/closed indicators should be added. Defaults to ```true```
 - __activeClasses__: An array of class names to add to the delimiter element to indicate that it is active. Defaults to ```['active']```
-- __breakOn__: An array of tags or selectors to use to indicate elements which should break out of the accordian section. Defaults to ```['h1', 'h2']```
-- __hideInactive__: Whether or not inactive accordians should be automatically hidden when another one is opened. Defaults to ```true```
+- __breakOn__: An array of tags or selectors to use to indicate elements which should break out of the accordion section. Defaults to ```['h1', 'h2']```
+- __hideInactive__: Whether or not inactive accordions should be automatically hidden when another one is opened. Defaults to ```true```
 
-Please note that I do not provide any stylesheet with this plugin, and the script itself only adds minimal required styling, so it's up to you to style your accordian and content appropriately using CSS.
+Please note that I do not provide any stylesheet with this plugin, and the script itself only adds minimal required styling, so it's up to you to style your accordion and content appropriately using CSS.
 
 ## Contributing
 

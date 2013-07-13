@@ -3,7 +3,7 @@
  * section delimiters. Especially useful in CMS and WYSIWYG environments where it is difficult to be sure of the
  * exact HTML structure to be used.
  *
- * @name openaccordian
+ * @name openaccordion
  * @version 1.0.0
  * @requires jQuery v1.2.3+
  * @author Jason Ross
