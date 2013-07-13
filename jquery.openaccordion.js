@@ -4,7 +4,7 @@
  * exact HTML structure to be used.
  *
  * @name openaccordion
- * @version 1.0.0
+ * @version 0.0.1
  * @requires jQuery v1.2.3+
  * @author Jason Ross
  * @license MIT License - http://www.opensource.org/licenses/mit-license.php
@@ -24,7 +24,9 @@
             displayOpenIndicator: true,
             activeClasses: ['active'],
             breakOn: ['h1', 'h2'],
-            hideInactive: true
+            hideInactive: true,
+            contentWrapper: $('<div></div>'),
+            contentWrapperClass: 'jquery-openaccordion-content'
         };
 
         options = $.extend(true, defaults, options);
@@ -35,7 +37,8 @@
                 rightTriangle = options.closedIndicator,
                 sectionSeparator = options.sectionSeparator,
                 headings = container.find(sectionSeparator),
-                visibleElements = $([]);
+                visibleElements = $([]),
+                contentWrapper = options.contentWrapper.clone(true);
 
             headings.css({
                 cursor: 'pointer'
@@ -44,19 +47,24 @@
             headings.each(function () {
                 var heading = $(this),
                     textElements = $(this).nextUntil(sectionSeparator, "*:not(" + options.breakOn.join(', ') + ")"),
-                    dropArrowContainer = $("<span class='drop-arrow'></span>").html(rightTriangle).css({
+                    dropArrowContainer = $("<span class='jquery-openaccordion-drop-arrow'></span>").html(rightTriangle).css({
                         "margin-right": "5px",
                         "float": "left",
                         "display": "block",
                         "font-size": parseInt(heading.css('font-size')) / 2 + 'px'
                     });
 
+                if (contentWrapper) {
+                    contentWrapper.addClass(options.contentWrapperClass);
+                    textElements.wrapAll(contentWrapper);
+                }
+
                 textElements.hide();
 
                 if (options.displayOpenIndicator) {
                     $(this).prepend(dropArrowContainer);
                     dropArrowContainer.css({
-                        "padding-top": (heading.height() - dropArrowContainer.height()) / 2
+                        "margin-top": (heading.height() - dropArrowContainer.height()) / 2
                     });
                 }
 
