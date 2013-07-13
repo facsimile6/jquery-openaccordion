@@ -1,8 +1,10 @@
 # jQuery OpenAccordion
 
 OpenAccordion is a jQuery plugin for accordion-style drop-downs which can use arbitrary tags or selectors as
-section delimiters. Especially useful in CMS and WYSIWYG environments where it is difficult to be sure of the
-exact HTML structure to be used.
+section headings. Any content located between headings headings is collapsed into accordian sections.
+
+Especially useful in CMS and WYSIWYG environments where it is difficult to be sure of the exact HTML structure to be
+used.
 
 ## Installation
 
@@ -18,7 +20,7 @@ Initialize an accordion section with default options using jQuery selectors:
 Additionally you may pass an options object to the openaccordion method:
 
     $("#my-accordion").openaccordion({
-        sectionSeparator: 'h3',
+        sectionHeading: 'h3',
         openedIndicator: "&#9660;",
         closedIndicator: "&#x25b6;",
         displayOpenIndicator: true,
@@ -33,7 +35,7 @@ The above options are the defaults, but can be modified to suit your needs. The 
 
 ## Options
 
-- __sectionSeparator__: The tag or selector to be used to deliniate the start of an accordion section. Defaults to ```h3```
+- __sectionHeading__: The tag or selector to be used to deliniate the heading and start of an accordion section. Defaults to ```h3```
 - __openedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is open/expanded. Defaults to the down pointing triangle HTML entity (&#9660;).
 - __closedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is closed/contracted. Defaults to the right pointing triangle HTML entity (&#x25b6;).
 - __displayOpenIndicator__: Whether or not the open/closed indicators should be added. Defaults to ```true```
