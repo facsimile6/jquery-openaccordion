@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery Open Accorian Sample</title>
+</head>
+
+<style type="text/css">
+
+    h3 {
+        font-weight: normal;
+    }
+
+    h3.active {
+        font-weight: bold;
+    }
+
+</style>
+
+<body>
+
+<div id="accordion">
+
+    <h1>First Accordion</h1>
+
+    <h3>This is a sample</h3>
+
+    <p>Some text</p>
+
+    <ul>
+        <li>A list</li>
+        <li>A list</li>
+    </ul>
+
+    <h3>The next accordion header</h3>
+
+    <p>More text</p>
+
+    <ol>
+        <li>Another list</li>
+        <li>Another list</li>
+    </ol>
+
+    <h1>Second Accordion</h1>
+
+    <h3>This is a sample</h3>
+
+    <p>Some text</p>
+
+    <ul>
+        <li>A list</li>
+        <li>A list</li>
+    </ul>
+
+    <h3>The next accordion header</h3>
+
+    <p>More text</p>
+
+    <ol>
+        <li>Another list</li>
+        <li>Another list</li>
+    </ol>
+
+</div>
+
+<script type="text/javascript" src="lib/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="jquery.openaccordion.min.js"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+        $("#accordion").openAccordion({
+            hideInactive: true
+        });
+    });
+
+</script>
+
+</body>
+</html>
