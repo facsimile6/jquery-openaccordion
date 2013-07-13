@@ -13,19 +13,7 @@
  */
 (function ($) {
     /**
-     * Accordion is a jQuery plugin for accordions which can use headings as section separators. All content
-     * between separators becomes the accordion section content.
-     *
-     * This is especially useful in WYSIWYG CMS systems where the content creators may not have knowledge on how to
-     * write a specific HTML layout required for other accordion implementations.
-     *
-     * The list separator defaults to h3, and h1 or h2 tags can be used to break out of the accordion content, but both
-     * can be customized via the listSeparator and breakOn options.
-     *
-     * No styles are added to the accordion except for an open/closed indicator which defaults to right/down triangle
-     * HTML entities, and a cursor: pointer for each of the headings, so it's up to you to style the accordion as
-     * necessary
-     *
+     * jQuery OpenAccordion plugin
      * @param [optionalParam] options
      */
     $.fn.openAccordion = function (options) {
