@@ -7,11 +7,39 @@ exact HTML structure to be used.
 ## Installation
 
     <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="path/to/jquery.openaccordian.min.js"></script>
+    <script type="text/javascript" src="path/to/jquery.openaccordion.min.js"></script>
 
 ## Usage
 
-Coming soon...
+Initialize an accordion section with default options using jQuery selectors:
+
+    $("#my-accordian").openaccordian();
+
+Additionally you may pass an options object to the openaccordian method:
+
+    $("#my-accordian").openaccordian({
+        sectionSeparator: 'h3',
+        openedIndicator: "&#9660;",
+        closedIndicator: "&#x25b6;",
+        displayOpenIndicator: true,
+        activeClasses: ['active'],
+        breakOn: ['h1', 'h2'],
+        hideInactive: true
+    });
+
+The above options are the defaults, but can be modified to suit your needs. The option values are explained below.
+
+## Options
+
+- __sectionSeparator__: The tag or selector to be used to deliniate the start of an accordian section. Defaults to ```h3```
+- __openedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is open/expanded. Defaults to the down pointing triangle HTML entity (&#9660;).
+- __closedIndicator__: A character, HTML entity, or element to be used as the indicator that a section is closed/contracted. Defaults to the right pointing triangle HTML entity (&#x25b6;).
+- __displayOpenIndicator__: Whether or not the open/closed indicators should be added. Defaults to ```true```
+- __activeClasses__: An array of class names to add to the delimiter element to indicate that it is active. Defaults to ```['active']```
+- __breakOn__: An array of tags or selectors to use to indicate elements which should break out of the accordian section. Defaults to ```['h1', 'h2']```
+- __hideInactive__: Whether or not inactive accordians should be automatically hidden when another one is opened. Defaults to ```true```
+
+Please note that I do not provide any stylesheet with this plugin, and the script itself only adds minimal required styling, so it's up to you to style your accordian and content appropriately using CSS.
 
 ## Contributing
 

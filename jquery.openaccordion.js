@@ -18,7 +18,7 @@
      */
     $.fn.openAccordion = function (options) {
         var defaults = {
-            listSeparator: 'h3',
+            sectionSeparator: 'h3',
             openedIndicator: "&#9660;",
             closedIndicator: "&#x25b6;",
             displayOpenIndicator: true,
@@ -33,8 +33,8 @@
             var container = $(this),
                 downTriangle = options.openedIndicator,
                 rightTriangle = options.closedIndicator,
-                listSeparator = options.listSeparator,
-                headings = container.find(listSeparator),
+                sectionSeparator = options.sectionSeparator,
+                headings = container.find(sectionSeparator),
                 visibleElements = $([]);
 
             headings.css({
@@ -43,7 +43,7 @@
 
             headings.each(function () {
                 var heading = $(this),
-                    textElements = $(this).nextUntil(listSeparator, "*:not(" + options.breakOn.join(', ') + ")"),
+                    textElements = $(this).nextUntil(sectionSeparator, "*:not(" + options.breakOn.join(', ') + ")"),
                     dropArrowContainer = $("<span class='drop-arrow'></span>").html(rightTriangle).css({
                         "margin-right": "5px",
                         "float": "left",
