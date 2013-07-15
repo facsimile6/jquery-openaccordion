@@ -93,6 +93,9 @@
 
                 if (hash && (heading.has("[name=" + hash + "]").length || heading.attr('name') == hash)) {
                     heading.click();
+                    $("html, body").animate({
+                        scrollTop: heading.offset().top
+                    }, 500);
                 }
             });
         });
