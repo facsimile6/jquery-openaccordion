@@ -30,6 +30,7 @@
         };
 
         options = $.extend(true, defaults, options);
+        var hash = window.location.hash.replace("#", "");
 
         $(this).each(function () {
             var container = $(this),
@@ -89,6 +90,10 @@
                     }
 
                 });
+
+                if (hash && (heading.has("[name=" + hash + "]").length || heading.attr('name') == hash)) {
+                    heading.click();
+                }
             });
         });
     };
