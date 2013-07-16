@@ -64,16 +64,13 @@
 
                 if (options.displayOpenIndicator) {
                     $(this).prepend(dropArrowContainer);
-                    dropArrowContainer.css({
-                        "margin-top": (heading.height() - dropArrowContainer.height()) / 2
-                    });
                 }
 
                 heading.on('click', function () {
 
                     if (options.hideInactive && visibleElements.length) {
                         headings.removeClass(options.activeClasses.join(' '));
-                        headings.find('.drop-arrow').html(rightTriangle);
+                        headings.find('.jquery-openaccordion-drop-arrow').html(rightTriangle);
                         visibleElements.slideUp();
                         visibleElements = $([]);
                     }
