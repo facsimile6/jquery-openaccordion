@@ -19,7 +19,7 @@
         border: 1px solid black;
     }
 
-    #accordion {
+    #accordion, #accordion-hover {
         width: 500px;
         margin: 0 auto;
     }
@@ -76,6 +76,54 @@
 
 </div>
 
+<div id="accordion-hover">
+    <h1>Open on Hover Accordion</h1>
+
+    <h1>First Accordion</h1>
+
+    <h3>This is a sample</h3>
+
+    <a name="test"></a>
+
+    <p>
+        Some text
+    </p>
+
+    <ul>
+        <li>A list</li>
+        <li>A list</li>
+    </ul>
+
+    <h3>The next accordion header</h3>
+
+    <p>More text</p>
+
+    <ol>
+        <li>Another list</li>
+        <li>Another list</li>
+    </ol>
+
+    <h1>Second Accordion</h1>
+
+    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id purus non nulla pellentesque imperdiet. Proin at nisi at tellus consequat porta at in metus.</h3>
+
+    <p>Some text</p>
+
+    <ul>
+        <li>A list</li>
+        <li>A list</li>
+    </ul>
+
+    <h3><a name="test">The next accordion header</a></h3>
+
+    <p>More text</p>
+
+    <ol>
+        <li>Another list</li>
+        <li>Another list</li>
+    </ol>
+</div>
+
 <script type="text/javascript" src="lib/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="jquery.openaccordion.min.js"></script>
 <script type="text/javascript">
@@ -83,6 +131,11 @@
     jQuery(document).ready(function ($) {
         $("#accordion").openAccordion({
             hideInactive: true
+        });
+
+        $("#accordion-hover").openAccordion({
+            hideInactive: true,
+            openOn: 'mouseenter'
         });
     });
 
